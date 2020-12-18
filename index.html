@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Web Worker Basic Example</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <style>
+            section {
+                max-width: 400px;
+            }
+            div {
+                padding: 10px;
+            }
+            label {
+                display: inline-block;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div>
+                <p>This example shows the differences between a computation made in the main thread or in a separate worker.</p>
+                <p>The "power three" algorithm is un-optimized on purpose, it's made by nesting three for loops</p>
+                <p>Depending on your CPU, you might see the difference using a higher number (4-core is slowing down around 2000 without web-workers)</p>
+            </div>
+            <div>
+                <label>WebWorkers ?</label>
+                <input id="webWorker" type="checkbox"/>
+            </div>
+            <div>
+                <label>Base number</label>
+                <input id="input-1" value="3" type="text"/>
+            </div>
+            <div>
+                <label>Result (power 3)</label>
+                <input id="result" disabled type="text"/>
+            </div>
+            <div>
+                <button id="button">Compute</button>
+            </div>
+        </section>
+        <script src='main.js'></script>
+    </body>
+</html>
